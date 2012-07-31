@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Doopie</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta http-equiv="Access-Control-Allow-Origin" content="*">
+            <link rel="stylesheet" href="js/jquery.mobile-1.1.0.min.css" />
+            <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+            <script src="js/jquery.mobile-1.1.0.min.js"></script>
+            <link href='http://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
+            <script src="js/script.js"></script>
+
+    </head>
+
+    <body>
+        <!-- Home page -->
+        <div data-role="page" id="main">
+            <!-- /header -->
+            <div>
+                <img src="images/57x57.png" style="float:left;display:inline"/>
+                <div>
+                    <h1 style="font-family: 'Alegreya', serif;font-size: 3em;margin: 0px 0px 0px">Doopie</h1>
+                    <p style="font-family: 'Alegreya', serif;margin: 0px 60px 0px">Laissez votre chien s'exprimer</p>
+                </div>
+            </div>
+            <!-- /content -->
+            <div data-role="content">
+                <div data-role="content" style="padding: 15px">
+                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Paris&amp;zoom=16&amp;size=288x200&amp;markers=Paris|Paris&amp;sensor=false"
+                        width="288" height="200">
+                </div>
+                <a href="javascript: load_flickr();" data-role="button" data-theme="e">my dog was here</a>
+                <!-- <a href="javascript: load_flickr();" data-role="button" data-theme="a">see happy puppies</a> -->
+                <!-- <a href="#popup" data-role="button" data-theme="b">Go</a> -->
+                <!-- <div>
+                    your latitude is:
+                    <div id="lat"></div>
+                    your longitude is:
+                    <div id="long"></div>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- Dudes page -->
+        <div data-role="page" id="dudes" data-add-back-btn="true">
+            <div data-role="header">
+                <h1>Dudes test</h1>
+            </div>
+            <div data-role="content">
+                <div id="list"></div>
+            </div>
+        </div>
+
+        <!-- Popup page -->
+        <div data-role="page" id="popup">
+            <div data-role="header">
+                <h1>Woohoo! =)</h1>
+            </div>
+            <div data-role="content">
+                <p>Thanks! Your spot will be cleaned!</p>
+
+<!--                 <div data-role="content" style="padding: 15px">
+                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Paris&amp;zoom=16&amp;size=288x200&amp;markers=Paris|Paris&amp;sensor=false"
+                        width="288" height="200">
+                </div>
+ -->            <div id="images"/>
+                <p><a href="#main" data-role="button">Done!</a></p>
+            </div>
+        </div>
+
+        <!-- Puppies page -->
+<!--         <div data-role="page" id="flickr" data-add-back-btn="true">
+            <div data-role="header">
+                <h1>Happy puppies!</h1>
+            </div>
+            <div data-role="content">
+                <div id="images"/>
+            </div>
+        </div>
+ -->
+    </body>
+</html>
