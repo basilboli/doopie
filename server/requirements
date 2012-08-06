@@ -1,0 +1,4 @@
+flask
+Flask-PyMongo
+simplejson
+requests

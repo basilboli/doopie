@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Insta$hit</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
+            <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+            <script src="jquery.mobile-1.1.0.min.js"></script>
+            <script src="script.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Dudes page -->
+        <div data-role="page" id="list" data-add-back-btn="true">
+            <div data-role="header">
+                <h1>Dudes test</h1>
+            </div>
+            <div data-role="content">
+                <div id="dudes"></div>
+            </div>
+        </div>
+        <script>
+            var url = "http://127.0.0.1:8000/api/v1/dude/1/?format=json" ;
+            // var url = "https://graph.facebook.com/632735851?format=json&callback=?" ;
+            // $.getJSON("https://graph.facebook.com/632735851?format=json",
+            //                    function(json){
+            //                         $('#dudes').html('<h2>Well, gee whiz! We found you a poster, skip!</h2>');
+            //                    });
+            $.getJSON(url,function(json){
+                                    $('#dudes').html(json.items);
+                               });
+        </script>
+
+    </body>
+</html>
